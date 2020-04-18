@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Online 24/7 Library</title>
+        <link rel="stylesheet" type="text/css" href="w3.css">
+        <link rel="stylesheet" type="text/css" href="home.css">
+        <script src="jQuery.js"></script>
+        <script>
+        $(document).ready(function(){
+            $('.bookImg').click(function(){
+                $('.imgShowPanel').slideDown(200);
+                var x = $(this).attr('src');
+                $('#imageZoom').attr('src', x);
+            });
+            $('#imageZoom').mouseout(function(){
+                $('.imgShowPanel').slideUp(200);
+            });
+            $('#logOut').click(function(){
+                $('.fakerl').css("display", "flex");
+                $('.fakerl').animate({height: '100%', width: '100%'}, 'slow');
+            });
+            $('#switch').click(function(){
+                $('.fakers').css("display", "flex");
+                $('.fakers').animate({height: '100%', width: '100%'}, 'slow');
+            });
+        });
+        </script>
+    </head>
+    <body>
+        <div class="w3-bar headContainer">
+            <h1 class="w3-bar-item">Online Open Library</h1>
+            <div id="username" class="messageBoxs w3-center"></div>
+            <button id="logOut" class="w3-bar-item w3-button w3-blue w3-round">LogOut</button>
+            <button id="switch" class="w3-bar-item w3-button w3-red w3-round">Switch</button>
+        </div>
+
+        <div class="tabContainer">
+            <div class="buttonContainer w3-bar w3-black">
+                <a class="w3-bar-item w3-button" onclick="showPanel(0)" href="javascript:void(0)">HOME</a>
+                <a class="w3-bar-item w3-button" onclick="showPanel(1)" href="javascript:void(0)">BROWSE</a>
+                <a class="w3-bar-item w3-button" onclick="showPanel(2)" href="javascript:void(0)">PURCHASED</a>
+                <a class="w3-bar-item w3-button" onclick="showPanel(3)" href="javascript:void(0)">MORE</a>
+                <a class="w3-bar-item w3-button w3-right w3-indigo"href="javascript:void(0)">Search</a>
+                <from>
+                    <input id="navSearch" class="w3-bar-item w3-input w3-border w3-right" type="text" placeholder="Search">
+                </from>
+            </div>
+            <div class="tab">
+                <div class="bookContainer">
+                    <a class="prev" onclick="showTrending(-1)">&#10094;</a>
+                    <a class="next" onclick="showTrending(1)">&#10095;</a>
+                    <div class="w3-center bookHead">TRENDING</div>
+                    <div class="trendingBookBlocks">
+                        <div class="bookBox">
+                            <div class="bookName">Book Name</div>
+                            <img src="book1.jpg" class="bookImg">
+                            <button class="bookBtn">BOOK</button>
+                        </div>
+                        <div class="bookBox">
+                            <div class="bookName">Book Name</div>
+                            <img src="book1.jpg" class="bookImg">
+                            <button class="bookBtn">BOOK</button>
+                        </div>
+                        <div class="bookBox">
+                            <div class="bookName">Book Name</div>
+                            <img src="book1.jpg" class="bookImg">
+                            <button class="bookBtn">BOOK</button>
+                        </div>
+                        <div class="bookBox">
+                            <div class="bookName">Book Name</div>
+                            <img src="book1.jpg" class="bookImg">
+                            <button class="bookBtn">BOOK</button>
+                        </div>
+                        <div class="bookBox">
+                            <div class="bookName">Book Name</div>
+                            <img src="book1.jpg" class="bookImg">
+                            <button class="bookBtn">BOOK</button>
+                        </div>
+                        <div class="bookBox">
+                            <div class="bookName">Book Name</div>
+                            <img src="book1.jpg" class="bookImg">
+                            <button class="bookBtn">BOOK</button>
+                        </div>
+                        <div class="bookBox">
+                            <div class="bookName">Book Name</div>
+                            <img src="book1.jpg" class="bookImg">
+                            <button class="bookBtn">BOOK</button>
+                        </div>
+                        <div class="bookBox">
+                            <div class="bookName">Book Name</div>
+                            <img src="book1.jpg" class="bookImg">
+                            <button class="bookBtn">BOOK</button>
+                        </div>
+                    </div>
+                    <div class="trendingBookBlocks">
+                        <div class="bookBox">
+                            <div class="bookName">Book Name</div>
+                            <img src="book.jpg" class="bookImg">
+                            <button class="bookBtn">BOOK</button>
+                        </div>
+                        <div class="bookBox">
+                            <div class="bookName">Book Name</div>
+                            <img src="book.jpg" class="bookImg">
+                            <button class="bookBtn">BOOK</button>
+                        </div>
+                        <div class="bookBox">
+                            <div class="bookName">Book Name</div>
+                            <img src="book.jpg" class="bookImg">
+                            <button class="bookBtn">BOOK</button>
+                        </div>
+                        <div class="bookBox">
+                            <div class="bookName">Book Name</div>
+                            <img src="book.jpg" class="bookImg">
+                            <button class="bookBtn">BOOK</button>
+                        </div>
+                        <div class="bookBox">
+                            <div class="bookName">Book Name</div>
+                            <img src="book.jpg" class="bookImg">
+                            <button class="bookBtn">BOOK</button>
+                        </div>
+                        <div class="bookBox">
+                            <div class="bookName">Book Name</div>
+                            <img src="book.jpg" class="bookImg">
+                            <button class="bookBtn">BOOK</button>
+                        </div>
+                        <div class="bookBox">
+                            <div class="bookName">Book Name</div>
+                            <img src="book.jpg" class="bookImg">
+                            <button class="bookBtn">BOOK</button>
+                        </div>
+                        <div class="bookBox">
+                            <div class="bookName">Book Name</div>
+                            <img src="book.jpg" class="bookImg">
+                            <button class="bookBtn">BOOK</button>
+                        </div>
+                    </div>
+                    <div class="trendingBookBlocks">
+                        <div class="bookBox">
+                            <div class="bookName">Book Name</div>
+                            <img src="book2.jpg" class="bookImg">
+                            <button class="bookBtn">BOOK</button>
+                        </div>
+                        <div class="bookBox">
+                            <div class="bookName">Book Name</div>
+                            <img src="book2.jpg" class="bookImg">
+                            <button class="bookBtn">BOOK</button>
+                        </div>
+                        <div class="bookBox">
+                            <div class="bookName">Book Name</div>
+                            <img src="book2.jpg" class="bookImg">
+                            <button class="bookBtn">BOOK</button>
+                        </div>
+                        <div class="bookBox">
+                            <div class="bookName">Book Name</div>
+                            <img src="book2.jpg" class="bookImg">
+                            <button class="bookBtn">BOOK</button>
+                        </div>
+                        <div class="bookBox">
+                            <div class="bookName">Book Name</div>
+                            <img src="book2.jpg" class="bookImg">
+                            <button class="bookBtn">BOOK</button>
+                        </div>
+                        <div class="bookBox">
+                            <div class="bookName">Book Name</div>
+                            <img src="book2.jpg" class="bookImg">
+                            <button class="bookBtn">BOOK</button>
+                        </div>
+                        <div class="bookBox">
+                            <div class="bookName">Book Name</div>
+                            <img src="book2.jpg" class="bookImg">
+                            <button class="bookBtn">BOOK</button>
+                        </div>
+                        <div class="bookBox">
+                            <div class="bookName">Book Name</div>
+                            <img src="book2.jpg" class="bookImg">
+                            <button class="bookBtn">BOOK</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bookContainer">
+                    <a class="prev" onclick="showTopSeller(-1)">&#10094;</a>
+                    <a class="next" onclick="showTopSeller(1)">&#10095;</a>
+                    <div class="w3-center bookHead">TOP SELLER</div>
+                    <div class="topSeller">
+                        <div class="bookBox">
+                            <div class="bookName">Book Name</div>
+                            <img src="book1.jpg" class="bookImg">
+                            <button class="bookBtn">BOOK</button>
+                        </div>
+                        <div class="bookBox">
+                            <div class="bookName">Book Name</div>
+                            <img src="book1.jpg" class="bookImg">
+                            <button class="bookBtn">BOOK</button>
+                        </div>
+                        <div class="bookBox">
+                            <div class="bookName">Book Name</div>
+                            <img src="book1.jpg" class="bookImg">
+                            <button class="bookBtn">BOOK</button>
+                        </div>
+                        <div class="bookBox">
+                            <div class="bookName">Book Name</div>
+                            <img src="book1.jpg" class="bookImg">
+                            <button class="bookBtn">BOOK</button>
+                        </div>
+                        <div class="bookBox">
+                            <div class="bookName">Book Name</div>
+                            <img src="book1.jpg" class="bookImg">
+                            <button class="bookBtn">BOOK</button>
+                        </div>
+                        <div class="bookBox">
+                            <div class="bookName">Book Name</div>
+                            <img src="book1.jpg" class="bookImg">
+                            <button class="bookBtn">BOOK</button>
+                        </div>
+                        <div class="bookBox">
+                            <div class="bookName">Book Name</div>
+                            <img src="book1.jpg" class="bookImg">
+                            <button class="bookBtn">BOOK</button>
+                        </div>
+                        <div class="bookBox">
+                            <div class="bookName">Book Name</div>
+                            <img src="book1.jpg" class="bookImg">
+                            <button class="bookBtn">BOOK</button>
+                        </div>
+                    </div>
+                    <div class="topSeller">
+                        <div class="bookBox">
+                            <div class="bookName">Book Name</div>
+                            <img src="book.jpg" class="bookImg">
+                            <button class="bookBtn">BOOK</button>
+                        </div>
+                        <div class="bookBox">
+                            <div class="bookName">Book Name</div>
+                            <img src="book.jpg" class="bookImg">
+                            <button class="bookBtn">BOOK</button>
+                        </div>
+                        <div class="bookBox">
+                            <div class="bookName">Book Name</div>
+                            <img src="book.jpg" class="bookImg">
+                            <button class="bookBtn">BOOK</button>
+                        </div>
+                        <div class="bookBox">
+                            <div class="bookName">Book Name</div>
+                            <img src="book.jpg" class="bookImg">
+                            <button class="bookBtn">BOOK</button>
+                        </div>
+                        <div class="bookBox">
+                            <div class="bookName">Book Name</div>
+                            <img src="book.jpg" class="bookImg">
+                            <button class="bookBtn">BOOK</button>
+                        </div>
+                        <div class="bookBox">
+                            <div class="bookName">Book Name</div>
+                            <img src="book.jpg" class="bookImg">
+                            <button class="bookBtn">BOOK</button>
+                        </div>
+                        <div class="bookBox">
+                            <div class="bookName">Book Name</div>
+                            <img src="book.jpg" class="bookImg">
+                            <button class="bookBtn">BOOK</button>
+                        </div>
+                        <div class="bookBox">
+                            <div class="bookName">Book Name</div>
+                            <img src="book.jpg" class="bookImg">
+                            <button class="bookBtn">BOOK</button>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            <div class="tab w3-red">
+                <div class="bookContainer">
+                    <a class="prev w3-text-black" onclick="showSubWise(-1)">&#10094;</a>
+                    <a class="next w3-text-black" onclick="showSubWise(1)">&#10095;</a>
+                    <div class="w3-center bookHead">SUBJECT WISE</div>
+                    <div class="subWiseBlock">
+                        <div class="bookBox">
+                            <div class="bookName w3-text-black">Book Name</div>
+                            <img src="book2.jpg" class="bookImg">
+                            <button class="bookBtn">PURCHASE</button>
+                        </div>
+                        <div class="bookBox">
+                            <div class="bookName w3-text-black">Book Name</div>
+                            <img src="book2.jpg" class="bookImg">
+                            <button class="bookBtn">PURCHASE</button>
+                        </div>
+                        <div class="bookBox">
+                            <div class="bookName w3-text-black">Book Name</div>
+                            <img src="book2.jpg" class="bookImg">
+                            <button class="bookBtn">PURCHASE</button>
+                        </div>
+                        <div class="bookBox">
+                            <div class="bookName w3-text-black">Book Name</div>
+                            <img src="book2.jpg" class="bookImg">
+                            <button class="bookBtn">PURCHASE</button>
+                        </div>
+                        <div class="bookBox">
+                            <div class="bookName w3-text-black">Book Name</div>
+                            <img src="book2.jpg" class="bookImg">
+                            <button class="bookBtn">PURCHASE</button>
+                        </div>
+                        <div class="bookBox">
+                            <div class="bookName w3-text-black">Book Name</div>
+                            <img src="book2.jpg" class="bookImg">
+                            <button class="bookBtn">PURCHASE</button>
+                        </div>
+                        <div class="bookBox">
+                            <div class="bookName w3-text-black">Book Name</div>
+                            <img src="book2.jpg" class="bookImg">
+                            <button class="bookBtn">PURCHASE</button>
+                        </div>
+                        <div class="bookBox">
+                            <div class="bookName w3-text-black">Book Name</div>
+                            <img src="book2.jpg" class="bookImg">
+                            <button class="bookBtn">PURCHASE</button>
+                        </div>
+                    </div>
+                    <div class="subWiseBlock">
+                        <div class="bookBox">
+                            <div class="bookName w3-text-black">Book Name</div>
+                            <img src="book.jpg" class="bookImg">
+                            <button class="bookBtn">PURCHASE</button>
+                        </div>
+                        <div class="bookBox">
+                            <div class="bookName w3-text-black">Book Name</div>
+                            <img src="book.jpg" class="bookImg">
+                            <button class="bookBtn">PURCHASE</button>
+                        </div>
+                        <div class="bookBox">
+                            <div class="bookName w3-text-black">Book Name</div>
+                            <img src="book.jpg" class="bookImg">
+                            <button class="bookBtn">PURCHASE</button>
+                        </div>
+                        <div class="bookBox">
+                            <div class="bookName w3-text-black">Book Name</div>
+                            <img src="book.jpg" class="bookImg">
+                            <button class="bookBtn">PURCHASE</button>
+                        </div>
+                        <div class="bookBox">
+                            <div class="bookName w3-text-black">Book Name</div>
+                            <img src="book.jpg" class="bookImg">
+                            <button class="bookBtn">PURCHASE</button>
+                        </div>
+                        <div class="bookBox">
+                            <div class="bookName w3-text-black">Book Name</div>
+                            <img src="book.jpg" class="bookImg">
+                            <button class="bookBtn">PURCHASE</button>
+                        </div>
+                        <div class="bookBox">
+                            <div class="bookName w3-text-black">Book Name</div>
+                            <img src="book.jpg" class="bookImg">
+                            <button class="bookBtn">PURCHASE</button>
+                        </div>
+                        <div class="bookBox">
+                            <div class="bookName w3-text-black">Book Name</div>
+                            <img src="book.jpg" class="bookImg">
+                            <button class="bookBtn">PURCHASE</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bookContainer">
+                    <a class="prev w3-text-black" onclick="showNovel(-1)">&#10094;</a>
+                    <a class="next w3-text-black" onclick="showNovel(1)">&#10095;</a>
+                    <div class="w3-center bookHead">NOVELS</div>
+                    <div class="novelBlock">
+                        <div class="bookBox">
+                            <div class="bookName w3-text-black">Book Name</div>
+                            <img src="book1.jpg" class="bookImg">
+                            <button class="bookBtn">PURCHASE</button>
+                        </div>
+                        <div class="bookBox">
+                            <div class="bookName w3-text-black">Book Name</div>
+                            <img src="book1.jpg" class="bookImg">
+                            <button class="bookBtn">PURCHASE</button>
+                        </div>
+                        <div class="bookBox">
+                            <div class="bookName w3-text-black">Book Name</div>
+                            <img src="book1.jpg" class="bookImg">
+                            <button class="bookBtn">PURCHASE</button>
+                        </div>
+                        <div class="bookBox">
+                            <div class="bookName w3-text-black">Book Name</div>
+                            <img src="book1.jpg" class="bookImg">
+                            <button class="bookBtn">PURCHASE</button>
+                        </div>
+                        <div class="bookBox">
+                            <div class="bookName w3-text-black">Book Name</div>
+                            <img src="book1.jpg" class="bookImg">
+                            <button class="bookBtn">PURCHASE</button>
+                        </div>
+                        <div class="bookBox">
+                            <div class="bookName w3-text-black">Book Name</div>
+                            <img src="book1.jpg" class="bookImg">
+                            <button class="bookBtn">PURCHASE</button>
+                        </div>
+                        <div class="bookBox">
+                            <div class="bookName w3-text-black">Book Name</div>
+                            <img src="book1.jpg" class="bookImg">
+                            <button class="bookBtn">PURCHASE</button>
+                        </div>
+                        <div class="bookBox">
+                            <div class="bookName w3-text-black">Book Name</div>
+                            <img src="book1.jpg" class="bookImg">
+                            <button class="bookBtn">PURCHASE</button>
+                        </div>
+                    </div>
+                    <div class="novelBlock">
+                        <div class="bookBox">
+                            <div class="bookName w3-text-black">Book Name</div>
+                            <img src="book.jpg" class="bookImg">
+                            <button class="bookBtn">PURCHASE</button>
+                        </div>
+                        <div class="bookBox">
+                            <div class="bookName w3-text-black">Book Name</div>
+                            <img src="book.jpg" class="bookImg">
+                            <button class="bookBtn">PURCHASE</button>
+                        </div>
+                        <div class="bookBox">
+                            <div class="bookName w3-text-black">Book Name</div>
+                            <img src="book.jpg" class="bookImg">
+                            <button class="bookBtn">PURCHASE</button>
+                        </div>
+                        <div class="bookBox">
+                            <div class="bookName w3-text-black">Book Name</div>
+                            <img src="book.jpg" class="bookImg">
+                            <button class="bookBtn">PURCHASE</button>
+                        </div>
+                        <div class="bookBox">
+                            <div class="bookName w3-text-black">Book Name</div>
+                            <img src="book.jpg" class="bookImg">
+                            <button class="bookBtn">PURCHASE</button>
+                        </div>
+                        <div class="bookBox">
+                            <div class="bookName w3-text-black">Book Name</div>
+                            <img src="book.jpg" class="bookImg">
+                            <button class="bookBtn">PURCHASE</button>
+                        </div>
+                        <div class="bookBox">
+                            <div class="bookName w3-text-black">Book Name</div>
+                            <img src="book.jpg" class="bookImg">
+                            <button class="bookBtn">PURCHASE</button>
+                        </div>
+                        <div class="bookBox">
+                            <div class="bookName w3-text-black">Book Name</div>
+                            <img src="book.jpg" class="bookImg">
+                            <button class="bookBtn">PURCHASE</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab w3-blue"><div class="bookContainer">
+                <a class="prev w3-text-black" onclick="showPurchased(-1)">&#10094;</a>
+                <a class="next w3-text-black" onclick="showPurchased(1)">&#10095;</a>
+                <div class="w3-center bookHead">MY BOOKS</div>
+                <div class="purchasedBlock">
+                    <div class="bookBox">
+                        <div class="bookName w3-text-black">Book Name</div>
+                        <img src="book1.jpg" class="bookImg">
+                        <button class="bookBtn">READ</button>
+                    </div>
+                    <div class="bookBox">
+                        <div class="bookName w3-text-black">Book Name</div>
+                        <img src="book1.jpg" class="bookImg">
+                        <button class="bookBtn">READ</button>
+                    </div>
+                    <div class="bookBox">
+                        <div class="bookName w3-text-black">Book Name</div>
+                        <img src="book1.jpg" class="bookImg">
+                        <button class="bookBtn">READ</button>
+                    </div>
+                    <div class="bookBox">
+                        <div class="bookName w3-text-black">Book Name</div>
+                        <img src="book1.jpg" class="bookImg">
+                        <button class="bookBtn">READ</button>
+                    </div>
+                    <div class="bookBox">
+                        <div class="bookName w3-text-black">Book Name</div>
+                        <img src="book1.jpg" class="bookImg">
+                        <button class="bookBtn">READ</button>
+                    </div>
+                    <div class="bookBox">
+                        <div class="bookName w3-text-black">Book Name</div>
+                        <img src="book1.jpg" class="bookImg">
+                        <button class="bookBtn">READ</button>
+                    </div>
+                    <div class="bookBox">
+                        <div class="bookName w3-text-black">Book Name</div>
+                        <img src="book1.jpg" class="bookImg">
+                        <button class="bookBtn">READ</button>
+                    </div>
+                    <div class="bookBox">
+                        <div class="bookName w3-text-black">Book Name</div>
+                        <img src="book1.jpg" class="bookImg">
+                        <button class="bookBtn">READ</button>
+                    </div>
+                </div>
+                <div class="purchasedBlock">
+                    <div class="bookBox">
+                        <div class="bookName w3-text-black">Book Name</div>
+                        <img src="book.jpg" class="bookImg">
+                        <button class="bookBtn">READ</button>
+                    </div>
+                    <div class="bookBox">
+                        <div class="bookName w3-text-black">Book Name</div>
+                        <img src="book.jpg" class="bookImg">
+                        <button class="bookBtn">READ</button>
+                    </div>
+                    <div class="bookBox">
+                        <div class="bookName w3-text-black">Book Name</div>
+                        <img src="book.jpg" class="bookImg">
+                        <button class="bookBtn">READ</button>
+                    </div>
+                    <div class="bookBox">
+                        <div class="bookName w3-text-black">Book Name</div>
+                        <img src="book.jpg" class="bookImg">
+                        <button class="bookBtn">READ</button>
+                    </div>
+                    <div class="bookBox">
+                        <div class="bookName w3-text-black">Book Name</div>
+                        <img src="book.jpg" class="bookImg">
+                        <button class="bookBtn">READ</button>
+                    </div>
+                    <div class="bookBox">
+                        <div class="bookName w3-text-black">Book Name</div>
+                        <img src="book.jpg" class="bookImg">
+                        <button class="bookBtn">READ</button>
+                    </div>
+                    <div class="bookBox">
+                        <div class="bookName w3-text-black">Book Name</div>
+                        <img src="book.jpg" class="bookImg">
+                        <button class="bookBtn">READ</button>
+                    </div>
+                    <div class="bookBox">
+                        <div class="bookName w3-text-black">Book Name</div>
+                        <img src="book.jpg" class="bookImg">
+                        <button class="bookBtn">READ</button>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="tab" style="background-color: #f0f0f0;">
+                <div class="moreContainer w3-center">
+                    <div class="openLib">
+                        <h2>OPEN LIBRARY</h2>
+                        <div class="openLibContent">
+                            <ul>
+                                <li><a href="#">Vision</a></li>
+                                <li><a href="#">Terms of service</a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Donate</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="discover">
+                        <h2>DISCOVER</h2>
+                        <div class="discoverContent">
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">Books</a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="#">Authors</a></li>
+                                <li><a href="#">Subjects</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="develop">
+                        <h2>DEVELOP</h2>
+                        <div class="developContent">
+                            <ul>
+                                <li><a href="#">Add Book</a></li>
+                                <li><a href="#">Writing Bot</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="help">
+                        <h2>HELP</h2>
+                        <div class="helpContent">
+                            <ul>
+                                <li><a href="#">Help Center</a></li>
+                                <li><a href="#">Report a problem</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="fakerl">
+            <div class="logOutBox">
+                <div id="closel" onclick="closel()">+</div>
+                <div class="containerl w3-center">
+                    <div class="messageBoxl">Are you sure you want to LogOut?</div>
+                    <a id="yesl" class="w3-button w3-green" href="newLogin.html">Yes</a>
+                    <button id="nol" class="w3-button w3-red" onclick="closel()">No</button>
+                </div>
+            </div>
+        </div>
+        <div class="fakers">
+            <div class="switchBox">
+                <div id="closes" onclick="closes()">+</div>
+                <div class="containers w3-center">
+                    <img id="userPic" src="download.png">
+                    <div class="messageBoxs">Enter User details</div>
+                    <form id="switchForm">
+                        <input class="w3-input w3-border w3-light-gray w3-round" type="text" placeholder="Username">
+                        <input class="w3-input w3-border w3-light-gray w3-round" type="password" placeholder="Password">
+                    </form>
+                    <button id="switchSub" class="w3-button w3-green w3-round w3-border">Submit</button>
+                </div>
+            </div>
+        </div>
+        <div class="imgShowPanel">
+            <div id="closeImg">+</div>
+            <img id="imageZoom" src="">
+        </div>
+        <div class="foot w3-center">
+            <h2>Contact US</h2>
+            <a id="eID" href="#" class="w3-myfont">xyz@weMakeGoodS**t@gmail.com</a>
+            <h2>Contributers :</h2>
+            <ul>
+                <li class="w3-text-red"><i>Dibyakanta Nayak</i> <b>    Roll No </b><i>43</i> <b>   Registration No</b> 11912134</li>
+                <li class="w3-text-blue"><i>Harsh</i> <b>    Roll No </b><i>47</i> <b>   Registration No</b> 11912162</li>
+                <li class="w3-text-green"><i>Yash Chaturvedi</i> <b>    Roll No </b><i>58</i> <b>   Registration No</b> 11912141</li>
+            </ul>
+        </div>
+        <script src="home.js"></script>
+    </body>
+</html>
